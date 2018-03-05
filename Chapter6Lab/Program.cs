@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Chapter6Lab
-{   /*In the application, create a class called Account with a method for debiting or credititing the total balance of an account. 
+{   /* In the application, create a class called Account with a method for debiting or credititing the total balance of an account. 
     The program should prompt the end user to first enter the account details (account number and balance) and then the credit/debit amount. 
     The prompt to enter the credit/debit amount should be in a loop and should execute till the end user wants.
     Each time the end user enters the cred/debit amount, the program should also show the new balance. */
@@ -13,6 +13,19 @@ namespace Chapter6Lab
     {
         static void Main(string[] args)
         {
+            Account.Credit();
+        }
+    }
+
+    class Account
+    {
+        public static void Credit()
+        {
+            int credit = 100;
+            int debit = 50;
+            int balance = credit - debit;
+            Console.WriteLine($"The total balance is {balance} euro");
+            Console.ReadKey();
         }
     }
 }
